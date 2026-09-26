@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Soul Connection — Movimiento y Conexión</title>
-  <meta name="description" content="Una experiencia de movimiento y conexión humana. Danza, yoga, constelaciones familiares, biodanza y arte, en un mismo universo." />
+  <title>Soul Connection — Dance Retreat</title>
+  <meta name="description" content="Cuerpo en movimiento, alma en conexión. Danza, yoga, constelaciones familiares, biodanza y arte, en un mismo universo." />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="./" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Soul Connection — Movimiento y Conexión" />
-  <meta property="og:description" content="Una experiencia de movimiento y conexión humana." />
+  <meta property="og:title" content="Soul Connection — Dance Retreat" />
+  <meta property="og:description" content="Cuerpo en movimiento, alma en conexión." />
   <meta property="og:image" content="images/og-cover.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -30,7 +30,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Soul Connection",
-    "slogan": "Una experiencia de movimiento y conexión humana."
+    "alternateName": "Soul Connection Dance Retreat",
+    "slogan": "Cuerpo en movimiento, alma en conexión."
   }
   </script>
   <script type="application/ld+json">
@@ -56,9 +57,20 @@
   <!-- ===================== NAV ===================== -->
   <header class="nav" data-cursor="">
     <a class="nav-logo" href="#hero" data-cursor="enter" aria-label="Soul Connection — inicio">
-      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
-        <text x="20" y="25" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">SC</text>
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="scGoldNav" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="var(--gold-bright)"/>
+            <stop offset="50%" stop-color="var(--gold-deep)"/>
+            <stop offset="100%" stop-color="var(--gold-bright)"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="42" fill="none" stroke="url(#scGoldNav)" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="205 60" transform="rotate(195 50 50)"/>
+        <g fill="var(--olive)" opacity="0.9">
+          <ellipse cx="78" cy="38" rx="10" ry="4" transform="rotate(35 78 38)"/>
+          <ellipse cx="84" cy="47" rx="8" ry="3.2" transform="rotate(62 84 47)"/>
+        </g>
+        <text x="50" y="66" text-anchor="middle" font-family="var(--font-script)" font-size="52" fill="currentColor">SC</text>
       </svg>
       <span class="visually-hidden">Soul Connection</span>
     </a>
@@ -93,21 +105,33 @@
 
     <section id="hero" class="scene" aria-label="Bienvenida">
       <div class="scene-inner hero-content">
-        <svg class="hero-mark" data-hero-mark viewBox="0 0 40 40" aria-hidden="true">
-          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="0.6"/>
-          <text x="20" y="25" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">SC</text>
+        <svg class="hero-mark" data-hero-mark viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="scGoldHero" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--gold-bright)"/>
+              <stop offset="50%" stop-color="var(--gold-deep)"/>
+              <stop offset="100%" stop-color="var(--gold-bright)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="42" fill="none" stroke="url(#scGoldHero)" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="205 60" transform="rotate(195 50 50)"/>
+          <g fill="var(--olive)" opacity="0.9">
+            <ellipse cx="78" cy="38" rx="10" ry="4" transform="rotate(35 78 38)"/>
+            <ellipse cx="84" cy="47" rx="8" ry="3.2" transform="rotate(62 84 47)"/>
+          </g>
+          <text x="50" y="66" text-anchor="middle" font-family="var(--font-script)" font-size="52" fill="currentColor">SC</text>
         </svg>
         <div class="hero-words" aria-hidden="true">
           <span class="hero-word serif" data-hero-word>SOUL</span>
           <span class="hero-word serif" data-hero-word>CONNECTION</span>
         </div>
-        <p class="hero-sub" data-hero-sub>MOVIMIENTO · CONEXIÓN · TRANSFORMACIÓN</p>
+        <div class="hero-rule" aria-hidden="true"><span></span><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0v16M0 8h16M2.3 2.3l11.4 11.4M13.7 2.3L2.3 13.7" stroke="var(--gold)" stroke-width="0.8"/></svg><span></span></div>
+        <p class="hero-sub" data-hero-sub>DANCE RETREAT</p>
 
-        <h1 class="visually-hidden">Soul Connection — una experiencia de movimiento y conexión humana.</h1>
+        <h1 class="visually-hidden">Soul Connection — Dance Retreat. Cuerpo en movimiento, alma en conexión.</h1>
 
         <div class="hero-lines" data-hero-lines style="margin-top:2rem;">
-          <p class="eyebrow">Una experiencia de movimiento y conexión humana.</p>
-          <p class="lede">Volvé a vos.</p>
+          <p class="eyebrow serif" style="font-style: italic; font-size:1.1rem; letter-spacing:0.02em; text-transform:none; color:var(--fg);">Cuerpo en movimiento, alma en conexión.</p>
+          <p class="lede">Una experiencia de movimiento y conexión humana.</p>
           <p class="lede">No es un viaje afuera. Es una vuelta a casa.</p>
         </div>
 
@@ -485,9 +509,9 @@
     <section id="final-loop" class="scene" aria-label="¿Qué necesita tu alma hoy?">
       <div class="scene-inner">
         <div class="dot breathing" aria-hidden="true"></div>
-        <p data-final-step class="serif" style="font-size:2rem;">SC</p>
+        <p data-final-step style="font-family: var(--font-script); font-size:3.2rem; color: var(--gold);">SC</p>
         <p data-final-step class="serif" style="font-size:1.4rem; letter-spacing:0.1em;">SOUL CONNECTION</p>
-        <p data-final-step class="lede" style="margin:0 auto;">Conectar con el alma a través del cuerpo.</p>
+        <p data-final-step class="serif" style="font-style: italic; margin:0 auto;">Cuerpo en movimiento, alma en conexión.</p>
         <p data-final-step class="h-section serif" style="margin-top:1.5rem;">¿Qué necesita tu alma hoy?</p>
         <a data-final-step class="btn" href="#hero" data-loop-restart data-magnetic data-cursor="enter" style="margin-top:1.5rem; display:inline-flex;">
           <span>Volver a entrar</span><span class="arrow" aria-hidden="true">→</span>
@@ -501,7 +525,7 @@
     <div class="footer-grid">
       <div>
         <span class="serif" style="font-size:1.2rem;">SOUL CONNECTION</span>
-        <p class="lede" style="margin-top:0.3rem;">Movimiento · Conexión · Transformación</p>
+        <p class="lede" style="margin-top:0.3rem;">Dance Retreat</p>
       </div>
       <ul class="footer-links">
         <li><a href="#" data-field="instagram_url" data-cursor="explore">Instagram</a></li>
@@ -509,7 +533,7 @@
         <li><a href="mailto:" data-field="email" data-cursor="explore">Contacto</a></li>
       </ul>
     </div>
-    <p class="footer-bottom">SOUL CONNECTION · MOVIMIENTO · CONEXIÓN · TRANSFORMACIÓN</p>
+    <p class="footer-bottom serif" style="font-style: italic; letter-spacing: 0.02em; text-transform: none;">Cuerpo en movimiento, alma en conexión.</p>
   </footer>
 
   <a class="btn btn-whatsapp whatsapp-fab" data-whatsapp-link data-cursor="connect" target="_blank" rel="noopener" href="#">

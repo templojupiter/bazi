@@ -3,23 +3,27 @@
    ========================================================================== */
 
 :root {
-  --cream: #F3EBDD;
-  --warm-white: #F8F5EF;
-  --sand: #D9C7A9;
-  --earth: #A98D67;
-  --gold: #B89A61;
-  --olive: #55583A;
-  --deep-olive: #303221;
-  --charcoal: #25231E;
-  --smoke: #777268;
+  /* Brand palette — Arena, Terra, Oro, Oliva, Carbón */
+  --cream: #EAE1CB;      /* Arena */
+  --warm-white: #F7F2E7;
+  --sand: #C7A96F;       /* Terra */
+  --earth: #A9825A;      /* Terra, deeper */
+  --gold: #C2A045;       /* Oro */
+  --gold-bright: #F1D48B;
+  --gold-deep: #B8892E;
+  --olive: #3F4128;      /* Oliva */
+  --deep-olive: #26241A;
+  --charcoal: #201E1A;   /* Carbón */
+  --smoke: #857D6C;
 
   --bg: var(--charcoal);
   --fg: var(--warm-white);
   --fg-muted: var(--smoke);
-  --line: rgba(248, 245, 239, 0.14);
+  --line: rgba(247, 242, 231, 0.14);
 
-  --font-serif: "Fraunces", "Times New Roman", serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Pinyon Script", cursive;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -36,12 +40,6 @@
 
   --nav-h: 5.5rem;
   color-scheme: dark;
-}
-
-@font-face {
-  font-family: "Fraunces";
-  src: local("Fraunces");
-  font-display: swap;
 }
 
 * { box-sizing: border-box; }

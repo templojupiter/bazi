@@ -45,6 +45,9 @@
 .hero-mark { width: 46px; height: 46px; margin-bottom: var(--space-3); }
 .hero-words { display: flex; flex-direction: column; gap: 0; margin: var(--space-2) 0; }
 .hero-word { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1; }
+.hero-rule { display: flex; align-items: center; gap: 0.8em; width: 220px; max-width: 60vw; }
+.hero-rule span { flex: 1; height: 1px; background: var(--line); }
+.hero-rule svg { flex-shrink: 0; opacity: 0.8; }
 .hero-sub { font-size: 0.85rem; letter-spacing: 0.3em; color: var(--fg-muted); margin-top: var(--space-1); }
 .hero-lines p { color: var(--fg-muted); }
 .hero-cta { margin-top: var(--space-4); }
