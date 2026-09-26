@@ -75,7 +75,22 @@
         card.setAttribute("data-story", g.historia || "");
         card.setAttribute("data-way", g.forma_de_acompanar || "");
         card.setAttribute("data-cursor", "view");
-        card.innerHTML = `<span class="guide-name serif">${g.nombre || ""}</span><span class="guide-line">${g.frase || ""}</span>`;
+
+        const photo = document.createElement("span");
+        photo.className = "guide-photo photo-placeholder round";
+        photo.setAttribute("data-label", "Foto real pendiente");
+        photo.setAttribute("role", "img");
+        photo.setAttribute("aria-label", `Placeholder — foto de ${g.nombre || "esta persona"} pendiente`);
+
+        const name = document.createElement("span");
+        name.className = "guide-name";
+        name.textContent = g.nombre || "";
+
+        const line = document.createElement("span");
+        line.className = "guide-line";
+        line.textContent = g.frase || "";
+
+        card.append(photo, name, line);
         guidesGrid.appendChild(card);
       });
     }
