@@ -1,6 +1,6 @@
 # Soul Connection
 
-Experiencia web inmersiva y cinematográfica para Soul Connection — una experiencia de movimiento y conexión humana (danza, yoga, constelaciones familiares, biodanza, arte, coaching y aventura, no solo un retiro de baile). HTML/CSS/JS puro (sin build step), Three.js para el sistema de partículas del hero, GSAP + ScrollTrigger para la narrativa de scroll.
+Experiencia web inmersiva y cinematográfica para Soul Connection — una experiencia de movimiento y conexión humana (danza, yoga, numerología/biodescodificación, biodanza, arte, coaching y aventura, no solo un retiro de baile). HTML/CSS/JS puro (sin build step), Three.js para el sistema de partículas del hero, GSAP + ScrollTrigger para la narrativa de scroll.
 
 ## Cómo correrlo
 
@@ -38,12 +38,12 @@ Si se abre directamente como archivo, el sitio sigue funcionando: cada dato mues
 
 `data/retiro.json` es la única fuente de contenido variable (fechas, precio, facilitadores, testimonios, WhatsApp, Instagram). Todo lo que aparece como `[COMPLETAR]` o como array vacío es un dato real que falta — nunca fue inventado y no debe reemplazarse por contenido ficticio. Para publicar el sitio con contenido real, completar ese archivo; el HTML se actualiza solo vía `main.js`.
 
-Confirmado: `retiro.fecha` (15 de noviembre — falta el año), `duracion` (10:00–18:00), `ubicacion` (Quinta Don Patricio Eventos, Moreno), y el cronograma real del día en `programa[]`.
+Confirmado: `retiro.fecha` (8 de noviembre de 2026 — todavía marcada como estimada por el equipo), `duracion` (10:00–18:00), `ubicacion` (Don Patricio Eventos, Moreno, Buenos Aires), `inversion.monto` ($80.000 por persona), y el cronograma real del día en `programa[]`.
 
 Campos pendientes clave:
 - `contacto.whatsapp_numero`, `instagram_url`, `email`
-- `retiro.lugar_descripcion`, año exacto de la fecha
-- `facilitadores[].nombre` — ya confirmados los roles (anfitriona, guía de Yoga, guía de Constelaciones Familiares, guía de Biodanza), faltan los nombres
+- `retiro.lugar_descripcion`, confirmación final de la fecha (hoy "estimada")
+- `facilitadores[].nombre` — ya confirmados los roles (anfitriona, guía de Yoga, guía de Numerología/Biodescodificación, guía de Biodanza), faltan los nombres
 - `programa[2].descripcion` (almuerzo)
 - `practicas[].descripcion` (Danza, Bienestar, Arte, Juego, Coaching, Aventura)
 - `testimonios` (array vacío — solo testimonios reales, no hay ninguno todavía)

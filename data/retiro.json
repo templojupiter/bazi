@@ -19,9 +19,9 @@
   },
 
   "retiro": {
-    "fecha": "15 de noviembre",
+    "fecha": "8 de noviembre de 2026",
     "duracion": "1 día · 10:00 a 18:00",
-    "ubicacion": "Quinta Don Patricio Eventos, Moreno",
+    "ubicacion": "Don Patricio Eventos, Moreno, Buenos Aires",
     "lugar_descripcion": "[COMPLETAR]",
     "mapa": {
       "lat": null,
@@ -45,7 +45,7 @@
     },
     {
       "nombre": "[COMPLETAR — nombre]",
-      "frase": "Guía de Constelaciones Familiares",
+      "frase": "Guía de Numerología / Biodescodificación",
       "historia": "[COMPLETAR]",
       "forma_de_acompanar": "[COMPLETAR]"
     },
@@ -62,7 +62,7 @@
     { "numero": "02", "nombre": "Yoga", "hora": "1h 30min", "descripcion": "Cuerpo, respiración y presencia." },
     { "numero": "03", "nombre": "Almuerzo", "hora": "1h", "descripcion": "[COMPLETAR]" },
     { "numero": "04", "nombre": "Relax + conversación", "hora": "30min", "descripcion": "Un espacio libre para descansar y procesar lo vivido." },
-    { "numero": "05", "nombre": "Constelaciones Familiares", "hora": "2h", "descripcion": "Un espacio para mirar hacia adentro." },
+    { "numero": "05", "nombre": "Numerología / Biodescodificación", "hora": "2h", "descripcion": "Un espacio para mirar hacia adentro." },
     { "numero": "06", "nombre": "Biodanza", "hora": "1h 30min", "descripcion": "Movimiento, música y cuerpo. El cuerpo vuelve a ser protagonista." },
     { "numero": "07", "nombre": "Tiempo libre + carta", "hora": "1h", "descripcion": "Un espacio íntimo para escribir: a tu yo del pasado, a tu yo del futuro, a alguien a quien necesitás perdonar o agradecer." }
   ],
@@ -71,7 +71,7 @@
     { "nombre": "Danza", "descripcion": "[COMPLETAR]" },
     { "nombre": "Yoga", "descripcion": "Cuerpo, respiración y presencia." },
     { "nombre": "Bienestar", "descripcion": "[COMPLETAR]" },
-    { "nombre": "Constelaciones Familiares", "descripcion": "Un espacio para mirar hacia adentro y soltar lo que ya no es tuyo." },
+    { "nombre": "Numerología / Biodescodificación", "descripcion": "[COMPLETAR]" },
     { "nombre": "Biodanza", "descripcion": "Movimiento, música y cuerpo, para volver a sentir." },
     { "nombre": "Escritura", "descripcion": "Una carta a quien fuiste, a quien serás, o a quien necesitás perdonar o agradecer." },
     { "nombre": "Arte", "descripcion": "[COMPLETAR]" },
@@ -83,7 +83,7 @@
   "testimonios": [],
 
   "inversion": {
-    "monto": "[COMPLETAR]",
+    "monto": "$80.000 por persona",
     "sena": "[COMPLETAR]",
     "formas_de_pago": [],
     "cupos": "[COMPLETAR]"
@@ -91,7 +91,7 @@
 
   "seo": {
     "title": "Soul Connection — Movimiento y Conexión",
-    "description": "Una experiencia de movimiento y conexión humana. Danza, yoga, constelaciones familiares, biodanza y arte, en un mismo universo.",
+    "description": "Una experiencia de movimiento y conexión humana. Danza, yoga, numerología/biodescodificación, biodanza y arte, en un mismo universo.",
     "og_image": "[COMPLETAR — imagen 1200x630 real]"
   }
 }
