@@ -63,11 +63,11 @@
       });
     }
 
-    // ---- Scene 03 — BODY → BREATH → PRESENCE → SOUL ----------------------
+    // ---- Scene 03 — the journey: llegar → pausar → ... → celebrar --------
     const words = gsap.utils.toArray("#bbps [data-word]");
     if (words.length) {
       const wordsTl = gsap.timeline({
-        scrollTrigger: { trigger: "#bbps", start: "top top", end: "+=140%", scrub: 0.6, pin: true },
+        scrollTrigger: { trigger: "#bbps", start: "top top", end: `+=${words.length * 35}%`, scrub: 0.6, pin: true },
       });
       words.forEach((w, i) => {
         wordsTl.to(w, { opacity: 1, duration: 0.3 });

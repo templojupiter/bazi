@@ -75,12 +75,19 @@
   display: flex; align-items: center; justify-content: center;
   text-align: center; height: 100vh;
 }
+#bbps { position: relative; }
 #bbps [data-word] {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 90vw;
+  text-align: center;
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(1.8rem, 7vw, 5.5rem);
   opacity: 0;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
 }
 [data-manifesto] {
   position: relative;
