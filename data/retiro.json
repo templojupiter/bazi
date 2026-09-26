@@ -1,0 +1,64 @@
+{
+  "_readme": "Fuente única de verdad para Soul Connection. Todo campo marcado [COMPLETAR] o con array vacío representa un dato real que aún no fue provisto. No inventar valores: completar aquí y el sitio se actualiza solo (ver README.md).",
+
+  "marca": {
+    "nombre": "SOUL CONNECTION",
+    "submarca": "DANCE RETREAT",
+    "tagline": "Conectar con el alma a través del cuerpo.",
+    "concepto": "Volver al cuerpo es volver al alma."
+  },
+
+  "contacto": {
+    "whatsapp_numero": "[COMPLETAR]",
+    "whatsapp_mensaje_precargado": "Hola, quiero saber más sobre Soul Connection Dance Retreat.",
+    "instagram_handle": "[COMPLETAR]",
+    "instagram_url": "[COMPLETAR]",
+    "email": "[COMPLETAR]"
+  },
+
+  "retiro": {
+    "fecha": "[COMPLETAR]",
+    "duracion": "[COMPLETAR]",
+    "ubicacion": "[COMPLETAR]",
+    "lugar_descripcion": "[COMPLETAR]",
+    "mapa": {
+      "lat": null,
+      "lng": null,
+      "nota": "[COMPLETAR — coordenadas o dirección para el mapa minimalista]"
+    }
+  },
+
+  "facilitadores": [],
+
+  "programa": [
+    { "numero": "01", "nombre": "ARRIVE", "descripcion": "[COMPLETAR]" },
+    { "numero": "02", "nombre": "OPEN", "descripcion": "[COMPLETAR]" },
+    { "numero": "03", "nombre": "CONNECT", "descripcion": "[COMPLETAR]" },
+    { "numero": "04", "nombre": "EXPAND", "descripcion": "[COMPLETAR]" },
+    { "numero": "05", "nombre": "RETURN", "descripcion": "[COMPLETAR]" }
+  ],
+
+  "practicas": [
+    { "nombre": "MOVEMENT", "descripcion": "[COMPLETAR]" },
+    { "nombre": "BREATH", "descripcion": "[COMPLETAR]" },
+    { "nombre": "DANCE", "descripcion": "[COMPLETAR]" },
+    { "nombre": "MEDITATION", "descripcion": "[COMPLETAR]" },
+    { "nombre": "REST", "descripcion": "[COMPLETAR]" },
+    { "nombre": "CONNECTION", "descripcion": "[COMPLETAR]" }
+  ],
+
+  "testimonios": [],
+
+  "inversion": {
+    "monto": "[COMPLETAR]",
+    "sena": "[COMPLETAR]",
+    "formas_de_pago": [],
+    "cupos": "[COMPLETAR]"
+  },
+
+  "seo": {
+    "title": "Soul Connection — Dance Retreat",
+    "description": "Conectar con el alma a través del cuerpo. Un retiro para volver al cuerpo, a la respiración y a la comunidad.",
+    "og_image": "[COMPLETAR — imagen 1200x630 real]"
+  }
+}

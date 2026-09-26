@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Soul Connection — Dance Retreat</title>
+  <meta name="description" content="Conectar con el alma a través del cuerpo. Un retiro para volver al cuerpo, a la respiración y a la comunidad." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="./" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Soul Connection — Dance Retreat" />
+  <meta property="og:description" content="Conectar con el alma a través del cuerpo." />
+  <meta property="og:image" content="images/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Soul Connection",
+    "alternateName": "Soul Connection Dance Retreat",
+    "slogan": "Conectar con el alma a través del cuerpo."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Soul Connection — Dance Retreat",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "startDate": "[COMPLETAR]",
+    "location": {
+      "@type": "Place",
+      "name": "[COMPLETAR]",
+      "address": "[COMPLETAR]"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" data-cursor="">
+    <a class="nav-logo" href="#hero" data-cursor="enter" aria-label="Soul Connection — inicio">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+        <text x="20" y="25" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">SC</text>
+      </svg>
+      <span class="visually-hidden">Soul Connection</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-links">
+        <li><a href="#hero" data-cursor="explore">Inicio</a></li>
+        <li><a href="#retreat" data-cursor="explore">El Retiro</a></li>
+        <li><a href="#practices" data-cursor="explore">Prácticas</a></li>
+        <li><a href="#guides" data-cursor="explore">Guías</a></li>
+        <li><a href="#testimonials" data-cursor="explore">Testimonios</a></li>
+        <li><a href="#talk" data-cursor="explore">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="sound-toggle" data-sound-toggle aria-pressed="false" type="button">
+        <span class="dot" aria-hidden="true"></span> SOUND
+      </button>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" type="button">MENU</button>
+    </div>
+  </header>
+
+  <audio data-ambient-audio loop preload="none">
+    <!-- [COMPLETAR] — fuente de audio ambiente real (respiración / viento / agua), extremadamente sutil -->
+  </audio>
+
+  <main id="main">
+
+    <!-- ===================== ESCENA 01 — ARRIVAL ===================== -->
+    <div id="scene-stage" aria-hidden="true">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+
+    <section id="hero" class="scene" aria-label="Bienvenida">
+      <div class="scene-inner hero-content">
+        <svg class="hero-mark" data-hero-mark viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="0.6"/>
+          <text x="20" y="25" text-anchor="middle" font-family="Fraunces, serif" font-size="15" fill="currentColor">SC</text>
+        </svg>
+        <div class="hero-words" aria-hidden="true">
+          <span class="hero-word serif" data-hero-word>SOUL</span>
+          <span class="hero-word serif" data-hero-word>CONNECTION</span>
+        </div>
+        <p class="hero-sub" data-hero-sub>DANCE RETREAT</p>
+
+        <h1 class="visually-hidden">Soul Connection — Dance Retreat. Conectar con el alma a través del cuerpo.</h1>
+
+        <div class="hero-lines" data-hero-lines style="margin-top:2rem;">
+          <p class="eyebrow">Conectar con el alma a través del cuerpo.</p>
+          <p class="lede">Volvé a vos.</p>
+          <p class="lede">No es un viaje afuera. Es una vuelta a casa.</p>
+        </div>
+
+        <div class="hero-cta" data-hero-cta>
+          <a class="btn" href="#retreat" data-magnetic data-cursor="enter">
+            <span>Entrar al retiro</span><span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <button class="breathe-cue" data-breathe-trigger type="button" data-cursor="connect">
+        <span class="ring" aria-hidden="true"></span> RESPIRÁ
+      </button>
+      <span class="scroll-cue" aria-hidden="true">SCROLL</span>
+    </section>
+
+    <!-- ===================== ESCENA 02 — THE BODY ===================== -->
+    <section id="body-knows" class="scene" data-reveal aria-label="El cuerpo sabe">
+      <div class="scene-inner" data-parallax="0.1">
+        <p class="eyebrow">The Body</p>
+        <h2 class="h-section serif">El cuerpo sabe.</h2>
+        <p class="lede" style="margin-top:1rem;">Solo hay que escucharlo.</p>
+        <a class="btn-ghost" href="#practices" data-cursor="view" style="margin-top:2rem; display:inline-block;">Explorar →</a>
+      </div>
+    </section>
+
+    <!-- ===================== ESCENA 03 — BODY→BREATH→PRESENCE→SOUL ===================== -->
+    <section id="bbps" aria-label="Body, Breath, Presence, Soul">
+      <span data-word class="serif">BODY</span>
+      <span data-word class="serif">BREATH</span>
+      <span data-word class="serif">PRESENCE</span>
+      <span data-word class="serif">SOUL</span>
+      <p data-manifesto class="serif">Volver al cuerpo<br />es volver al alma.</p>
+    </section>
+
+    <!-- ===================== ESCENA 04 — CONNECTION ===================== -->
+    <section id="connection" class="scene" aria-label="Nadie se transforma solo">
+      <canvas class="canvas-layer" aria-hidden="true"></canvas>
+      <div class="scene-inner" data-reveal>
+        <p class="eyebrow">Connection</p>
+        <h2 class="h-section serif">Nadie se transforma solo.</h2>
+        <p class="lede" style="margin-top:1rem;">Somos una red de personas que se encuentran, se escuchan y se acompañan.</p>
+        <a class="btn-ghost" href="#need-today" data-cursor="view" style="margin-top:2rem; display:inline-block;">Conocer más →</a>
+      </div>
+    </section>
+
+    <!-- ===================== INTERACCIÓN CENTRAL — ¿QUÉ NECESITÁS HOY? ===================== -->
+    <section id="need-today" class="scene" aria-label="¿Qué necesitás hoy?">
+      <canvas class="canvas-layer" aria-hidden="true"></canvas>
+      <div class="scene-inner" style="text-align:center;">
+        <p class="eyebrow">Tu cuerpo sabe</p>
+        <h2 class="h-section serif">¿Qué necesitás hoy?</h2>
+        <div class="float-words" role="group" aria-label="Elegí lo que necesitás hoy" style="margin-top:2.5rem;">
+          <button type="button" data-need="descansar" data-cursor="connect">Descansar</button>
+          <button type="button" data-need="soltar" data-cursor="connect">Soltar</button>
+          <button type="button" data-need="reconectar" data-cursor="connect">Reconectar</button>
+          <button type="button" data-need="sanar" data-cursor="connect">Sanar</button>
+          <button type="button" data-need="claridad" data-cursor="connect">Claridad</button>
+          <button type="button" data-need="comunidad" data-cursor="connect">Comunidad</button>
+          <button type="button" data-need="volver-a-sentir" data-cursor="connect">Volver a sentir</button>
+          <button type="button" data-need="empezar-de-nuevo" data-cursor="connect">Empezar de nuevo</button>
+        </div>
+        <p data-need-response aria-live="polite"></p>
+        <div data-need-followup>
+          <p class="serif" style="font-size:clamp(1.4rem,3vw,2.2rem); max-width:24ch; margin:0 auto;">
+            Quizás no necesités encontrar algo.<br />Quizás necesités volver a encontrarte.
+          </p>
+          <a class="btn" href="#retreat" data-magnetic data-cursor="enter" style="margin-top:2rem; display:inline-flex;">
+            <span>Conocer el retiro</span><span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EL RETIRO ===================== -->
+    <section id="retreat" class="scene" aria-label="El retiro">
+      <div class="scene-inner grid-2">
+        <div class="photo-placeholder" data-label="Espacio para fotografía real" role="img" aria-label="Placeholder — fotografía del retiro pendiente de reemplazo"></div>
+        <div>
+          <p class="eyebrow">El Retiro</p>
+          <h2 class="h-section serif">Un lugar para volver a vos.</h2>
+          <dl class="info-list">
+            <div><dt>Fecha</dt><dd data-field="fecha">[COMPLETAR]</dd></div>
+            <div><dt>Duración</dt><dd data-field="duracion">[COMPLETAR]</dd></div>
+            <div><dt>Ubicación</dt><dd data-field="ubicacion">[COMPLETAR]</dd></div>
+            <div><dt>Facilitadores</dt><dd data-field="facilitadores">[COMPLETAR]</dd></div>
+          </dl>
+          <a class="btn" href="#program" data-magnetic data-cursor="enter" style="margin-top:2rem; display:inline-flex;">
+            <span>Conocer el retiro</span><span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DAY BY DAY ===================== -->
+    <section id="program" class="scene" aria-label="Programa día por día">
+      <div class="scene-inner">
+        <p class="eyebrow">Programa</p>
+        <h2 class="h-section serif" style="margin-bottom:2.5rem;">Un recorrido, no una agenda.</h2>
+        <div class="day-rail" data-day-rail>
+          <ol class="day-nodes">
+            <li><button type="button" data-day-node data-index="0" data-cursor="explore">01 · Arrive</button></li>
+            <li><button type="button" data-day-node data-index="1" data-cursor="explore">02 · Open</button></li>
+            <li><button type="button" data-day-node data-index="2" data-cursor="explore">03 · Connect</button></li>
+            <li><button type="button" data-day-node data-index="3" data-cursor="explore">04 · Expand</button></li>
+            <li><button type="button" data-day-node data-index="4" data-cursor="explore">05 · Return</button></li>
+          </ol>
+          <div class="day-frames">
+            <article data-day-frame data-index="0"><p class="lede" data-day-desc>[COMPLETAR]</p></article>
+            <article data-day-frame data-index="1"><p class="lede" data-day-desc>[COMPLETAR]</p></article>
+            <article data-day-frame data-index="2"><p class="lede" data-day-desc>[COMPLETAR]</p></article>
+            <article data-day-frame data-index="3"><p class="lede" data-day-desc>[COMPLETAR]</p></article>
+            <article data-day-frame data-index="4"><p class="lede" data-day-desc>[COMPLETAR]</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRÁCTICAS ===================== -->
+    <section id="practices" class="scene" aria-label="Prácticas">
+      <div class="scene-inner">
+        <p class="eyebrow">Prácticas</p>
+        <h2 class="h-section serif" style="margin-bottom:2.5rem;">Formas de volver al cuerpo.</h2>
+        <div class="practice-cloud">
+          <div data-practice tabindex="0" role="button" aria-expanded="false">
+            <h3 class="serif">Movement</h3>
+            <p class="practice-body" data-practice-desc="MOVEMENT">[COMPLETAR]</p>
+          </div>
+          <div data-practice tabindex="0" role="button" aria-expanded="false">
+            <h3 class="serif">Breath</h3>
+            <p class="practice-body" data-practice-desc="BREATH">[COMPLETAR]</p>
+          </div>
+          <div data-practice tabindex="0" role="button" aria-expanded="false">
+            <h3 class="serif">Dance</h3>
+            <p class="practice-body" data-practice-desc="DANCE">[COMPLETAR]</p>
+          </div>
+          <div data-practice tabindex="0" role="button" aria-expanded="false">
+            <h3 class="serif">Meditation</h3>
+            <p class="practice-body" data-practice-desc="MEDITATION">[COMPLETAR]</p>
+          </div>
+          <div data-practice tabindex="0" role="button" aria-expanded="false">
+            <h3 class="serif">Rest</h3>
+            <p class="practice-body" data-practice-desc="REST">[COMPLETAR]</p>
+          </div>
+          <div data-practice tabindex="0" role="button" aria-expanded="false">
+            <h3 class="serif">Connection</h3>
+            <p class="practice-body" data-practice-desc="CONNECTION">[COMPLETAR]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DANCE ===================== -->
+    <section id="dance" class="scene" aria-label="Move your body">
+      <div class="scene-inner grid-2">
+        <div>
+          <p class="eyebrow">Dance</p>
+          <h2 class="h-section serif">Move<br />your body.</h2>
+          <p class="lede" style="margin-top:1rem;">Cuando el cuerpo se mueve, algo dentro empieza a abrirse.</p>
+        </div>
+        <div class="photo-placeholder" data-label="Espacio para fotografía / video real" role="img" aria-label="Placeholder — video de movimiento pendiente"></div>
+      </div>
+    </section>
+
+    <!-- ===================== THE PLACE ===================== -->
+    <section id="place" class="scene" aria-label="El lugar">
+      <div class="scene-inner grid-2">
+        <div class="photo-placeholder" data-label="Espacio para fotografía real" role="img" aria-label="Placeholder — paisaje del lugar pendiente"></div>
+        <div>
+          <p class="eyebrow">The Place</p>
+          <h2 class="h-section serif">Un paisaje que te abraza.</h2>
+          <p class="lede" style="margin-top:1rem;">Naturaleza · Silencio · Conexión</p>
+          <p class="lede" style="margin-top:1rem;" data-field="lugar_descripcion">[COMPLETAR]</p>
+          <a class="btn-ghost" href="#" data-cursor="view" style="margin-top:1.5rem; display:inline-block;">Explorar →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GUIDES ===================== -->
+    <section id="guides" class="scene" aria-label="Quién te acompaña">
+      <div class="scene-inner">
+        <p class="eyebrow">Who Guides You</p>
+        <h2 class="h-section serif" style="margin-bottom:2.5rem;">Personas, antes que credenciales.</h2>
+        <div class="guides-grid" data-guides-grid>
+          <p class="testimonials-empty">[COMPLETAR — facilitadores reales del retiro]</p>
+        </div>
+      </div>
+      <div class="guide-overlay" data-guide-overlay aria-hidden="true" role="dialog" aria-modal="true">
+        <button data-guide-close type="button" data-cursor="explore">CERRAR ✕</button>
+        <div class="content">
+          <h3 class="serif" data-guide-name style="font-size:2rem;"></h3>
+          <p class="lede" data-guide-story style="margin-top:1rem;"></p>
+          <p class="lede" data-guide-way style="margin-top:1rem;"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ¿ES PARA VOS? ===================== -->
+    <section id="fit" class="scene" aria-label="¿Es para vos?">
+      <div class="scene-inner fit-grid">
+        <div>
+          <h2 class="h-section serif">Es para vos si...</h2>
+          <ul>
+            <li>Sentís que necesitás volver a habitar tu cuerpo.</li>
+            <li>Buscás una pausa real, no una escapada.</li>
+            <li>Estás dispuesta/o a estar presente, aunque incomode.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="h-section serif">Quizás no sea tu momento si...</h2>
+          <ul>
+            <li>Buscás una experiencia de entretenimiento rápido.</li>
+            <li>No podés sostener unos días sin conectividad constante.</li>
+            <li>Preferís observar antes que participar.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <section id="testimonials" class="scene" aria-label="Testimonios">
+      <div class="scene-inner">
+        <p class="eyebrow" style="text-align:center; display:block;">Testimonios</p>
+        <div data-testimonials style="margin-top:2rem;">
+          <p class="testimonials-empty">[COMPLETAR — testimonios reales de participantes. No se muestran testimonios inventados.]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== INVERSIÓN ===================== -->
+    <section id="pricing" class="scene" aria-label="Inversión">
+      <div class="scene-inner">
+        <p class="eyebrow">Inversión</p>
+        <dl class="price-list" style="margin-top:2rem;">
+          <div><dt>Inversión</dt><dd data-field="inversion_monto">[COMPLETAR]</dd></div>
+          <div><dt>Seña</dt><dd data-field="inversion_sena">[COMPLETAR]</dd></div>
+          <div><dt>Formas de pago</dt><dd data-field="formas_de_pago">[COMPLETAR]</dd></div>
+          <div><dt>Cupos</dt><dd data-field="inversion_cupos">[COMPLETAR]</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== FORMULARIO — INGRESAR AL RETIRO ===================== -->
+    <section id="form-section" class="scene" aria-label="Ingresar al retiro">
+      <div class="scene-inner intake" data-intake-form>
+        <div class="thread" aria-hidden="true">
+          <svg width="220" height="24" viewBox="0 0 220 24">
+            <path class="thread-path" d="M2,12 H218" />
+            <path class="thread-progress" d="M2,12 H218" />
+          </svg>
+        </div>
+
+        <div class="steps">
+          <div data-step="1" data-step-type="text">
+            <p class="step-question serif">¿Cómo te llamás?</p>
+            <input class="step-input" type="text" name="nombre" required autocomplete="name" />
+            <div class="step-actions"><button class="btn" type="button" data-next data-cursor="enter">Continuar →</button></div>
+          </div>
+
+          <div data-step="2" data-step-type="options">
+            <p class="step-question serif">¿Qué te trae hasta acá?</p>
+            <div class="step-options" role="group">
+              <button type="button" data-option="Descansar">Descansar</button>
+              <button type="button" data-option="Soltar">Soltar</button>
+              <button type="button" data-option="Reconectar">Reconectar</button>
+              <button type="button" data-option="Sanar">Sanar</button>
+              <button type="button" data-option="Claridad">Claridad</button>
+              <button type="button" data-option="Comunidad">Comunidad</button>
+              <button type="button" data-option="Cambio de etapa">Cambio de etapa</button>
+              <button type="button" data-option="Curiosidad">Curiosidad</button>
+            </div>
+            <div class="step-actions"><button class="btn-ghost" type="button" data-prev>← Volver</button></div>
+          </div>
+
+          <div data-step="3" data-step-type="options">
+            <p class="step-question serif">¿Cómo llegás hoy?</p>
+            <div class="step-options" role="group">
+              <button type="button" data-option="Cansada/o">Cansada/o</button>
+              <button type="button" data-option="Con ganas">Con ganas</button>
+              <button type="button" data-option="En transición">En transición</button>
+              <button type="button" data-option="Con dudas">Con dudas</button>
+              <button type="button" data-option="Lista/o">Lista/o</button>
+            </div>
+            <div class="step-actions"><button class="btn-ghost" type="button" data-prev>← Volver</button></div>
+          </div>
+
+          <div data-step="4" data-step-type="text">
+            <p class="step-question serif">¿Qué te gustaría soltar?</p>
+            <textarea class="step-input" rows="2" name="soltar"></textarea>
+            <div class="step-actions">
+              <button class="btn-ghost" type="button" data-prev>← Volver</button>
+              <button class="btn" type="button" data-next data-cursor="enter">Continuar →</button>
+            </div>
+          </div>
+
+          <div data-step="5" data-step-type="text">
+            <p class="step-question serif">¿Qué parte de vos querés volver a escuchar?</p>
+            <textarea class="step-input" rows="2" name="escuchar"></textarea>
+            <div class="step-actions">
+              <button class="btn-ghost" type="button" data-prev>← Volver</button>
+              <button class="btn" type="button" data-next data-cursor="enter">Continuar →</button>
+            </div>
+          </div>
+
+          <div data-step="6" data-step-type="text">
+            <p class="step-question serif">¿Por qué ahora?</p>
+            <textarea class="step-input" rows="2" name="porque"></textarea>
+            <div class="step-actions">
+              <button class="btn-ghost" type="button" data-prev>← Volver</button>
+              <button class="btn" type="button" data-next data-cursor="enter">Enviar</button>
+            </div>
+          </div>
+        </div>
+
+        <div data-connection-found>
+          <p class="eyebrow" style="display:block;">Connection Found</p>
+          <h2 class="h-section serif">We received your story.</h2>
+          <p class="lede" style="margin:1rem auto 2rem; max-width:36ch;">El siguiente paso es una conversación.</p>
+          <a class="btn btn-whatsapp" data-whatsapp-cta data-cursor="connect" target="_blank" rel="noopener" href="#" style="display:inline-flex;">
+            <span>Hablar por WhatsApp</span><span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HABLEMOS ===================== -->
+    <section id="talk" class="scene" aria-label="Hablemos">
+      <div class="scene-inner">
+        <h2 class="h-section serif">Hablemos.</h2>
+        <p class="lede" style="margin:1rem auto; max-width:40ch;">Algunas decisiones no se toman en un formulario.</p>
+        <p class="lede" style="margin:0 auto; max-width:40ch;">Si sentís que este retiro puede ser para vos, hablemos.</p>
+        <div class="talk-actions">
+          <a class="btn btn-whatsapp" data-whatsapp-link data-cursor="connect" target="_blank" rel="noopener" href="#">
+            <span>WhatsApp</span><span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn-ghost" href="mailto:" data-field="email" data-cursor="explore">Agendar una charla →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL LOOP ===================== -->
+    <section id="final-loop" class="scene" aria-label="¿Qué necesita tu alma hoy?">
+      <div class="scene-inner">
+        <div class="dot breathing" aria-hidden="true"></div>
+        <p data-final-step class="serif" style="font-size:2rem;">SC</p>
+        <p data-final-step class="serif" style="font-size:1.4rem; letter-spacing:0.1em;">SOUL CONNECTION</p>
+        <p data-final-step class="lede" style="margin:0 auto;">Conectar con el alma a través del cuerpo.</p>
+        <p data-final-step class="h-section serif" style="margin-top:1.5rem;">¿Qué necesita tu alma hoy?</p>
+        <a data-final-step class="btn" href="#hero" data-loop-restart data-magnetic data-cursor="enter" style="margin-top:1.5rem; display:inline-flex;">
+          <span>Volver a entrar</span><span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <span class="serif" style="font-size:1.2rem;">SOUL CONNECTION</span>
+        <p class="lede" style="margin-top:0.3rem;">Dance Retreat</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#" data-field="instagram_url" data-cursor="explore">Instagram</a></li>
+        <li><a href="#" data-whatsapp-link data-cursor="explore" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:" data-field="email" data-cursor="explore">Contacto</a></li>
+      </ul>
+    </div>
+    <p class="footer-bottom">SOUL CONNECTION · DANCE RETREAT</p>
+  </footer>
+
+  <a class="btn btn-whatsapp whatsapp-fab" data-whatsapp-link data-cursor="connect" target="_blank" rel="noopener" href="#">
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- Vendor (CDN, no build step) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- App -->
+  <script src="js/particles.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

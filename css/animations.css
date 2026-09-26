@@ -1,0 +1,135 @@
+/* ==========================================================================
+   MOTION — every movement carries meaning. slow, organic, cinematic.
+   ========================================================================== */
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+.breathing {
+  animation: breathe 10s var(--ease-in-out) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathing { animation: none; }
+}
+
+/* Reveal-on-scroll base state (JS/GSAP toggles .is-visible) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1.1s var(--ease-out), transform 1.1s var(--ease-out);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
+/* -------------------------------------------------------------------------
+   Custom cursor
+   ------------------------------------------------------------------------- */
+
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  pointer-events: none;
+  z-index: 900;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s var(--ease-out), height 0.4s var(--ease-out),
+              background-color 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+  will-change: transform;
+}
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 34px; height: 34px;
+  margin: -17px 0 0 -17px;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 154, 97, 0.5);
+  pointer-events: none;
+  z-index: 899;
+  transition: width 0.5s var(--ease-out), height 0.5s var(--ease-out),
+              margin 0.5s var(--ease-out), opacity 0.4s var(--ease-out),
+              border-color 0.4s var(--ease-out);
+  will-change: transform;
+}
+
+.cursor[data-state="explore"] { width: 6px; height: 6px; }
+.cursor-ring[data-state="explore"] { width: 56px; height: 56px; margin: -28px 0 0 -28px; }
+
+.cursor-ring[data-state="enter"] { width: 70px; height: 70px; margin: -35px 0 0 -35px; border-color: var(--gold); }
+
+.cursor-ring[data-state="connect"] { width: 46px; height: 46px; margin: -23px 0 0 -23px; border-style: dashed; }
+
+.cursor[data-state="view"] { background: var(--cream); }
+.cursor-ring[data-state="view"] { width: 90px; height: 90px; margin: -45px 0 0 -45px; opacity: 0.35; }
+
+body.has-custom-cursor, body.has-custom-cursor a, body.has-custom-cursor button {
+  cursor: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor, .cursor-ring { display: none !important; }
+  body.has-custom-cursor, body.has-custom-cursor a, body.has-custom-cursor button {
+    cursor: auto;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Nav show/hide
+   ------------------------------------------------------------------------- */
+
+.nav {
+  transition: transform 0.6s var(--ease-out), background-color 0.6s var(--ease-out);
+}
+.nav.nav-hidden { transform: translateY(-110%); }
+
+/* -------------------------------------------------------------------------
+   Light thread (form progress)
+   ------------------------------------------------------------------------- */
+
+.thread-path {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+.thread-progress {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.9s var(--ease-in-out);
+}
+
+/* -------------------------------------------------------------------------
+   Sound toggle
+   ------------------------------------------------------------------------- */
+
+.sound-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: none;
+  border: none;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--fg-muted);
+}
+.sound-toggle .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--smoke);
+  transition: background 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+.sound-toggle[aria-pressed="true"] .dot {
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+}

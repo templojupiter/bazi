@@ -1,0 +1,47 @@
+/* ==========================================================================
+   RESPONSIVE — mobile is its own experience, not a shrunk desktop.
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .scene-inner { padding: var(--space-4) var(--space-3); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 4.5rem; }
+
+  .nav-links { display: none; }
+  .nav.is-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: var(--charcoal);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    z-index: 850;
+  }
+  .nav.is-open .nav-links a { font-size: 1.4rem; font-family: var(--font-serif); }
+
+  .menu-toggle { display: inline-flex; }
+
+  .float-words { flex-direction: column; gap: var(--space-2); }
+
+  .day-rail { flex-direction: column; }
+
+  .practice-cloud { grid-template-columns: 1fr; }
+
+  .guides-grid { grid-template-columns: 1fr; }
+
+  .whatsapp-fab {
+    right: var(--space-2);
+    bottom: var(--space-2);
+    padding: 0.7em 1em;
+    font-size: 0.68rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle { display: none; }
+}
