@@ -125,7 +125,11 @@
     const frames = document.querySelectorAll("[data-day-frame]");
 
     function activate(index) {
-      nodes.forEach((n, i) => n.classList.toggle("is-active", i === index));
+      nodes.forEach((n, i) => {
+        n.classList.toggle("is-active", i === index);
+        if (i === index) n.setAttribute("aria-current", "step");
+        else n.removeAttribute("aria-current");
+      });
       frames.forEach((f, i) => f.classList.toggle("is-active", i === index));
     }
 
@@ -143,37 +147,66 @@
     activate(0);
   }
 
-  /** Practices — expand in place, no cards. */
+  /** Practices — expand in place, no cards. Keyboard-operable: it's a
+   *  role="button" div, so unlike a real <button> it won't fire "click" on
+   *  Enter/Space by itself. */
   function initPractices() {
-    document.querySelectorAll("[data-practice]").forEach((el) => {
-      el.addEventListener("click", () => {
-        const isOpen = el.classList.contains("is-open");
-        document.querySelectorAll("[data-practice]").forEach((o) => o.classList.remove("is-open"));
-        if (!isOpen) el.classList.add("is-open");
+    const all = document.querySelectorAll("[data-practice]");
+    function toggle(el) {
+      const isOpen = el.classList.contains("is-open");
+      all.forEach((o) => {
+        o.classList.remove("is-open");
+        o.setAttribute("aria-expanded", "false");
+      });
+      if (!isOpen) {
+        el.classList.add("is-open");
+        el.setAttribute("aria-expanded", "true");
+      }
+    }
+    all.forEach((el) => {
+      el.addEventListener("click", () => toggle(el));
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+          e.preventDefault();
+          toggle(el);
+        }
       });
     });
   }
 
-  /** Guides — click opens a fullscreen editorial panel. */
+  /** Guides — click opens a fullscreen editorial panel. Keyboard users get
+   *  focus moved into the dialog, Escape to close, and focus restored to
+   *  whichever card opened it — a modal that traps focus without ever
+   *  giving it back strands keyboard and screen-reader users inside it. */
   function initGuides() {
     const overlay = document.querySelector("[data-guide-overlay]");
     if (!overlay) return;
     const nameEl = overlay.querySelector("[data-guide-name]");
     const storyEl = overlay.querySelector("[data-guide-story]");
     const wayEl = overlay.querySelector("[data-guide-way]");
+    const closeBtn = overlay.querySelector("[data-guide-close]");
+    let lastTrigger = null;
+
+    function close() {
+      overlay.classList.remove("is-open");
+      overlay.setAttribute("aria-hidden", "true");
+      lastTrigger?.focus();
+    }
 
     document.querySelectorAll("[data-guide-card]").forEach((card) => {
       card.addEventListener("click", () => {
+        lastTrigger = card;
         nameEl.textContent = card.getAttribute("data-name") || "";
         storyEl.textContent = card.getAttribute("data-story") || "";
         wayEl.textContent = card.getAttribute("data-way") || "";
         overlay.classList.add("is-open");
         overlay.setAttribute("aria-hidden", "false");
+        closeBtn?.focus();
       });
     });
-    overlay.querySelector("[data-guide-close]")?.addEventListener("click", () => {
-      overlay.classList.remove("is-open");
-      overlay.setAttribute("aria-hidden", "true");
+    closeBtn?.addEventListener("click", close);
+    overlay.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
     });
   }
 

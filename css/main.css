@@ -7,14 +7,14 @@
   --cream: #EAE1CB;      /* Arena */
   --warm-white: #F7F2E7;
   --sand: #C7A96F;       /* Terra */
-  --earth: #A9825A;      /* Terra, deeper */
-  --gold: #C2A045;       /* Oro */
+  --earth: #7A5D2A;      /* Terra, deeper — tuned to pass 4.5:1 on cream (was failing at 2.68:1) */
+  --gold: #CDAC55;       /* Oro — tuned so eyebrow/link text clears 4.5:1 on olive too */
   --gold-bright: #F1D48B;
   --gold-deep: #B8892E;
   --olive: #3F4128;      /* Oliva */
   --deep-olive: #26241A;
   --charcoal: #201E1A;   /* Carbón */
-  --smoke: #857D6C;
+  --smoke: #B8AE97;      /* tuned for 4.5:1+ on dark backgrounds (was 4.08:1, failing) */
 
   --bg: var(--charcoal);
   --fg: var(--warm-white);

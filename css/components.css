@@ -3,6 +3,16 @@
    brand system stays a clean, reusable base.
    ========================================================================== */
 
+/* Light-background sections need darker gold/muted tokens to keep text at
+   4.5:1 contrast — the same --gold that reads fine on charcoal drops to
+   ~1.7:1 on cream. Scoping the override on the custom property means every
+   .eyebrow / .lede / border already using var(--gold) or var(--fg-muted)
+   picks it up automatically. */
+#retreat, #program, #guides, #testimonials, #talk {
+  --gold: var(--earth);
+  --fg-muted: #635C4C;
+}
+
 /* ---- Navigation --------------------------------------------------------- */
 .nav {
   position: fixed;

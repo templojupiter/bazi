@@ -22,15 +22,28 @@
 
     const answers = {};
     let current = 0;
+    // Hidden until submit — inert so its WhatsApp link isn't Tab-reachable
+    // before there's a story to hand off.
+    document.querySelector("[data-connection-found]")?.setAttribute("inert", "");
 
-    function paint() {
-      steps.forEach((s, i) => s.classList.toggle("is-active", i === current));
+    function paint(focus = true) {
+      steps.forEach((s, i) => {
+        const isActive = i === current;
+        s.classList.toggle("is-active", isActive);
+        // Inactive steps are already opacity:0/pointer-events:none, but
+        // without `inert` their inputs stayed reachable by Tab — a
+        // keyboard user could land in a screen's worth of invisible fields.
+        if (isActive) s.removeAttribute("inert");
+        else s.setAttribute("inert", "");
+      });
       if (progressPath) {
         const pct = current / (steps.length - 1);
         progressPath.style.strokeDashoffset = String(pathLength * (1 - pct));
       }
-      const active = steps[current];
-      active?.querySelector("input, textarea, button[data-option]")?.focus({ preventScroll: true });
+      if (focus) {
+        const active = steps[current];
+        active?.querySelector("input, textarea, button[data-option]")?.focus({ preventScroll: true });
+      }
     }
 
     function canAdvance(step) {
@@ -84,6 +97,7 @@
       form.classList.add("is-complete");
       const found = document.querySelector("[data-connection-found]");
       found?.classList.add("is-visible");
+      found?.removeAttribute("inert");
       found?.scrollIntoView({ behavior: "smooth" });
 
       const contact = getContact ? getContact() : {};
@@ -102,7 +116,9 @@
       }
     }
 
-    paint();
+    // Initial mount: set up step state without stealing focus from the page
+    // the visitor just landed on.
+    paint(false);
   }
 
   window.SoulForm = { init };
